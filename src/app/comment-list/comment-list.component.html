@@ -1,0 +1,14 @@
+<app-comment></app-comment>
+<div *ngFor="let comment of comments; let i = index">
+  <div>
+    <h4 matLine> {{comment.name}} </h4>
+    <p>{{comment.message}}</p>
+    <button mat-mini-fab (click)="onDeleteComment(comment.id)"><mat-icon>delete</mat-icon></button>
+  </div>
+<!--  <mat-card-actions>-->
+<!--    <mat-button-toggle (click)="togglePanel[i] = !togglePanel[i]">Reply</mat-button-toggle>-->
+<!--    <app-reply-form [commentId]="comment.articleId" *ngIf="togglePanel[i]"></app-reply-form>-->
+<!--  </mat-card-actions>-->
+  <mat-divider></mat-divider>
+</div>
+

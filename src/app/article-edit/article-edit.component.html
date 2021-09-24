@@ -1,0 +1,18 @@
+<h2 *ngIf="article">Edit article: {{article.title}}</h2>
+<h2 *ngIf="!article">Create a new article: </h2>
+
+<div class="form-group col-5">
+  <form [formGroup]="form">
+    <label>Title</label>
+    <input type="text" formControlName="title" class="form-control">
+    <label>SubTitle</label>
+    <input type="text" formControlName="subTitle" class="form-control">
+    <label>Author</label>
+    <input type="text" formControlName="author" class="form-control">
+    <label>Text</label>
+    <textarea formControlName="content" rows="8" class="form-control"></textarea>
+  </form>
+</div>
+<button *ngIf="!new" (click)="updateArticle()" mat-stroked-button color="primary">Save changes</button>
+<button *ngIf="new" (click)="postArticle()" mat-stroked-button color="primary">Post article</button>
+<button (click)="back()" mat-stroked-button color="primary">Go home </button>

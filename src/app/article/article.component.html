@@ -1,0 +1,20 @@
+<mat-dialog-actions>
+  <button (click)="back()" mat-button color="primary">Back</button>
+</mat-dialog-actions>
+
+<mat-card style="margin-bottom: 100px">
+  <mat-card-title>
+    <h2>{{article?.title}}</h2>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <h3>{{article?.subTitle}}</h3>
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <h5>{{article?.author}}</h5>
+  </mat-card-subtitle>
+  <hr>
+  <mat-card-content style="margin-top:40px ">
+    <p class="body-text" >{{article?.content}}</p>
+  </mat-card-content>
+</mat-card>
+<app-comment-list></app-comment-list>
